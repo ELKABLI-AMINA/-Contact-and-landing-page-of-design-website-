@@ -1,0 +1,293 @@
+:root {
+  --bg-color: #fbf7ee;
+  --black-text-color: #000;
+  --blue-color: #0e459e;
+  --gray-text: #a2a2a2;
+  --card-bg-white: #fff;
+  --pricing-card-bg:#fff3d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Karla", "Poppins", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+
+  width: 80%;
+}
+
+/* Nav bar start */
+
+.container nav {
+  margin-top: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  cursor: pointer;
+}
+
+.container nav .menu ul {
+  gap: 24px;
+  display: flex;
+}
+
+.container nav .menu ul li a {
+  color: var(--black-text-color);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.container nav .btns .btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+}
+
+.btn-blue {
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 145px;
+  border: none;
+  height: 50px;
+  background-color: var(--blue-color);
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  border-bottom: 4px solid #041c40;
+}
+
+.rounded-blue-btn{
+    width: 120px;
+    height: 43px;
+    background-color: #13366d;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+
+}
+
+/* Nav Bar End */
+
+/* Header Start */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+/* global class for titles and paragraphs */
+.title {
+  color: var(--blue-color);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+}
+.paragraph {
+  color: var(--gray-text);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* , for select 2 items */
+
+header .left,
+.right {
+  width: 50%;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 10%;
+  gap: 20px;
+}
+
+.left .form {
+  display: flex;
+}
+
+.left .form input {
+  height: 50px;
+  width: 70%;
+  border: 1px solid #b5b5b5;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.left .feautures {
+  display: flex;
+  gap: 50px;
+}
+
+.left .feautures .ft {
+  display: flex;
+  justify-content: center;
+}
+
+.left .feautures .ft img {
+  width: 20px;
+  height: 20px;
+}
+
+.left .feautures .ft h6 {
+  font-size: 16px;
+  color: var(--gray-text);
+}
+
+header .right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* header end */
+
+/* feautures-sec start */
+
+.feautures-sec , .pricing .cards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.feautures-sec .card , .pricing .cards .card{
+  background-color: var(--card-bg-white);
+  border: 1px solid #b8b8b8;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: auto;
+    width: 24%;
+
+}
+.feautures-sec .card h4{
+    font-size: 28px;
+}
+.feautures-sec .card img{
+    width: 50px;
+    height: 50px;
+}
+
+span{
+    color: #000;
+    font-weight: bold;
+}
+
+
+/* ======pricing section start */
+
+.pricing{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.full-width{
+
+     width: 100% !important;
+     margin: 0 !important;
+     
+
+}
+.pricing .cards .card {
+    display: flex;
+    background-color: #FFF3D9;
+}
+
+.pricing .cards .card .btns{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pricing .cards .card ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.pricing .cards .card ul li{
+
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+
+}
+
+.pricing .cards .card h1{
+    font-size: 36px;
+    margin-top: auto;
+}
+
+.pricing .cards .card h1 span{
+
+    color: var(--gray-text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media query */
+@media only screen and (max-width: 1100px) {
+  header {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  header .left,
+  .right {
+    gap: 50px;
+    width: 100%;
+  }
+  header .left {
+    padding: 0;
+  }
+
+  /* =========== */
+
+  .feautures-sec .card , .pricing .cards .card{
+    width: 45%;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+}
